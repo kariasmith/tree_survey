@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'partials/headers.html' %}
+</head>
+<body>
+    <div class="d-flex justify-content-end bd-highlight mb-2 bg-light text-dark bg-opacity-75 rounded" style="padding-right: 10px;">
+        <a class="me-3" href="/dashboard">Home</a>
+        <a class="me-3" href="/companies">Companies</a>
+        <a class="me-3" href="/tree_search">Tree Search</a>
+        <a href="/logout">Logout</a>
+    </div>
+    <div>
+        <h1 class="text-light">Add Location</h1>
+    </div>
+        <form action="/add_location" method="post">
+        <div class="d-flex justify-content-between bd-highlight mb-2">
+            <div class="m-3 bg-primary text-light bg-opacity-50 rounded d-flex flex-column bd-highlight w-50 p-3 h-100" style="padding-top: 20px; padding-left: 10px; background-color: #eee;">
+                {% with messages = get_flashed_messages(category_filter=['new_location']) %}
+                {% if messages %}
+                        {% for message in messages %}
+                        <p class="alert alert-danger">{{message}}</p> 
+                        {% endfor %}
+                {% endif %}
+                {% endwith %}
+            <br><br><label>Location Name</label>
+            <input type="text" name="name">
+            <br><br><label>Address</label>
+            <input type="text" name="address">
+            <br><br><label>Address line 2</label>
+            <input type="text" name="address_2">
+            <br><br><label>City</label>
+            <input type="text" name="city">
+            <div class="col-md-3 dropdown">
+                <label class="form-label">State</label>
+                <select class="form-select" name="state">
+                <option value="AK">AK</option>
+                <option value="AL">AL</option>
+                <option value="AR">AR</option>
+                <option value="AZ">AZ</option>
+                <option value="CA">CA</option>
+                <option value="CO">CO</option>
+                <option value="CT">CT</option>
+                <option value="DE">DE</option>
+                <option value="FL">FL</option>
+                <option value="GA">GA</option>
+                <option value="HI">HI</option>
+                <option value="IA">IA</option>
+                <option value="ID">ID</option>
+                <option value="IL">IL</option>
+                <option value="IN">IN</option>
+                <option value="KS">KS</option>
+                <option value="KY">KY</option>
+                <option value="LA">LA</option>
+                <option value="MA">MA</option>
+                <option value="MD">MD</option>
+                <option value="ME">ME</option>
+                <option value="MI">MI</option>
+                <option value="MN">MN</option>
+                <option value="MO">MO</option>
+                <option value="MS">MS</option>
+                <option value="MT">MT</option>
+                <option value="NC">NC</option>
+                <option value="ND">ND</option>
+                <option value="NE">NE</option>
+                <option value="NH">NH</option>
+                <option value="NJ">NJ</option>
+                <option value="NM">NM</option>
+                <option value="NV">NV</option>
+                <option value="NY">NY</option>
+                <option value="OH">OH</option>
+                <option value="OK">OK</option>
+                <option value="OR">OR</option>
+                <option value="PA">PA</option>
+                <option value="RI">RI</option>
+                <option value="SC">SC</option>
+                <option value="SD">SD</option>
+                <option value="TN">TN</option>
+                <option value="TX">TX</option>
+                <option value="UT">UT</option>
+                <option value="VA">VA</option>
+                <option value="VT">VT</option>
+                <option value="WA">WA</option>
+                <option value="WI">WI</option>
+                <option value="WV">WV</option>
+                <option value="WY">WY</option>
+                </select>
+            </div>
+            <br><br><label>Zip</label>
+            <input type="text" name="zip">
+            </div>
+            <div class="m-3 bg-primary text-light bg-opacity-50 rounded d-flex flex-column bd-highlight w-50 p-3 h-100" style="padding-top: 20px; padding-left: 10px; background-color: #eee;">
+                <div class="row mb-3">
+                <div class="form-check form-check-inline">
+                <label>Deciduous trees:</label>
+                <div class="form-check form-check-inline">
+                <input type="number" name="deciduous_trees" min="0">
+                </div>
+                </div>
+                </div>
+                <div class="row mb-3">
+                <div class="form-check form-check-inline">
+                <label>Coniferous trees:</label>
+                <div class="form-check form-check-inline">
+                <input type="number" name="coniferous_trees" min="0">
+                </div>
+                </div>
+                </div>
+                <input type="hidden" name="user_id" value="{{user_id}}">
+                <input class="btn btn-primary" type="submit" value="Submit">
+            </div>
+        </div>
+        </form>
+</body>
+</html>

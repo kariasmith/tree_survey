@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'partials/headers.html' %}
+</head>
+<body>
+  <div class="d-flex justify-content-between bd-highlight mb-2">
+    <form action="/register" method="POST" class="m-3 bg-primary text-light bg-opacity-50 rounded d-flex flex-column bd-highlight w-50 p-3 h-100">
+        <section class="jumbotron">
+        <div>
+          <h1 class="row mb-3 p-2">Register</h1>
+          {% with messages = get_flashed_messages(category_filter=['register']) %}     <!-- declare a variable called messages -->
+              {% if messages %}                            <!-- check if there are any messages -->
+                  {% for message in messages %}            <!-- loop through the messages -->
+                  <p class="alert alert-danger">{{message}}</p>                   <!-- display each message in a paragraph tag -->
+                  {% endfor %}
+              {% endif %}
+          {% endwith %}
+          <p style="font-size: 9px">• All fields are required • First Name and Last Name must be letters and at least 3 characters
+            • Email format must be valid • Passwords must be 8 characters long
+            • Passwords must contain one Upper case letter • Passwords must contain one lower case letter
+            • Passwords must contain at least one number  • Passwords must contain a special character ~ ! @ # $ % ^ & *
+          </p>
+          <div class="row mb-3">
+          <label class="col-sm-2 col-form-label">First Name: </label>
+          <div class="col-sm-10">
+          <input class="form-control" type="text" name="first_name">
+          </div>
+          </div>
+          <div class="row mb-3">
+          <label class="col-sm-2 col-form-label">Last Name: </label>
+          <div class="col-sm-10">
+          <input class="form-control" type="text" name="last_name">
+          </div>
+          </div>
+          <div class="row mb-3">
+          <label class="col-sm-2 col-form-label">Email: </label>
+          <div class="col-sm-10">
+          <input class="form-control" type="email" name="email">
+          </div>
+          </div>
+          <div class="row mb-3">
+          <label class="col-sm-2 col-form-label">Password: </label>
+          <div class="col-sm-10">
+          <input class="form-control" type="password" name="password">
+          </div>
+          </div>
+          <div class="row mb-3">
+          <label class="col-sm-2 col-form-label">Confirm password: </label>
+          <div class="col-sm-10">
+          <input class="form-control" type="password" name="confirm">
+          </div>
+          </div>
+          <p>
+            <br>
+            <button class="btn btn-info my-2">Register</button>     <!-- Using button the form submits, when using input type it doesn't -->
+          </p>
+        </div>
+        </section>
+    </form>
+    <form action="/login" method="POST" class="m-3 bg-success text-light bg-opacity-50 rounded d-flex flex-column bd-highlight w-50 p-3 h-100">
+      <section class="jumbotron">
+          <div>
+            <h1 class="row mb-3 p-2">Login</h1>
+            {% with messages = get_flashed_messages(category_filter=['login']) %}     <!-- declare a variable called messages -->
+            {% if messages %}                            <!-- check if there are any messages -->
+                {% for message in messages %}            <!-- loop through the messages -->
+                    <p class="alert alert-danger">{{message}}</p>                   <!-- display each message in a paragraph tag -->
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+          <div class="row mb-3">
+          <label class="col-sm-2 col-form-label">Email: </label>
+          <div class="col-sm-10">
+          <input class="form-control" type="email" name="email"><br>
+          </div>
+          </div>
+          <div class="row mb-3">
+          <label class="col-sm-2 col-form-label">Password: </label>
+          <div class="col-sm-10">
+          <input class="form-control" type="password" name="password">
+          </div>
+          </div>
+          <p>
+          <br>
+          <button class="btn btn-info my-2">Login</button>    <!-- Using button the form submits, when using input type it doesn't -->
+          </p>
+          </div>
+      </section>
+    </form>
+  </div>
+</body>
+</html>

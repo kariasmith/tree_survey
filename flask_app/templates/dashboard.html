@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'partials/headers.html' %}
+</head>
+<body>
+    <div class="d-flex justify-content-end bd-highlight mb-2 bg-light text-dark bg-opacity-75 rounded" style="padding-right: 10px;">
+        <a class="me-3" href="/add_location">Add Location</a>
+        <a class="me-3" href="/companies">Companies</a>
+        <a class="me-3" href="/tree_search">Tree Search</a>
+        <a class="me-3" href="/tree_survey">Tree Survey</a>
+        <a href="/logout">Logout</a>
+    </div>
+    <form action="/dashboard" class="m-3 bg-primary text-light bg-opacity-50 rounded d-flex flex-column bd-highlight w-75 p-3 h-100 ">
+        <div class="container">
+            <input type="hidden" name="user_id" value="{{user.id}}">
+            <h1>Welcome {{user.first_name}}!!</h1>
+            <p style="font-size:48px"> &#128512; &#128516; &#128525; &#128151;</p>
+            <p>Your posted locations:</p>
+        </div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Location</th>
+                <th scope="col">Deciduous trees</th>
+                <th scope="col">Coniferous trees</th>
+                <th scope="col">Actions</th>
+                <th scope="col">Date Created</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for iter in locations %}
+            <tr>
+                <td>{{iter.name}}</td>
+                <td>{{iter.deciduous_trees}}</td>
+                <td>{{iter.coniferous_trees}}</td>
+                <td><a href="/location/{{iter.id}}">view location</a> 
+                {% if iter.user_id == user.id: %}
+                | <a href="/location/edit/{{iter.id}}">edit</a> | <a href="/location/delete/{{iter.id}}">delete</a>
+                {% endif %}
+                </td>
+                <td>{{iter.created_at.strftime("%B %d %Y")}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

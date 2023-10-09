@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'partials/headers.html' %}
+</head>
+<body>
+    <div class="d-flex justify-content-end bd-highlight mb-2 bg-light text-dark bg-opacity-75 rounded" style="padding-right: 10px;">
+        <a class="me-3" href="/dashboard">Home</a>
+        <a class="me-3" href="/companies">Companies</a>
+        <a href="/logout">Logout</a>
+    </div>
+    <div class="d-flex justify-content-between bd-highlight mb-2">
+        <div class="m-3 bg-primary text-light bg-opacity-50 rounded d-flex flex-column bd-highlight w-50 p-3 h-100" style="padding-top: 20px; padding-left: 10px; background-color: #eee;">
+            <h1 class="text-light" style="padding-left: 10px;">Tree Search</h1>
+            <h1 class="text-light">Page is coming soon!</h1>
+
+        <label for="formFile" class="form-label">Default file input</label>
+        <input class="form-control" type="file" id="formFile">
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="formCheckDefault">
+            <label class="form-check-label" for="formCheckDefault">Default checkbox</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="formCheckChecked" checked="">
+            <label class="form-check-label" for="formCheckChecked">Checked checkbox</label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioDefault" id="formRadioDefault">
+            <label class="form-check-label" for="formRadioDefault">Default radio</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioDefault" id="formRadioChecked" checked="">
+            <label class="form-check-label" for="formRadioChecked">Default checked radio</label>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

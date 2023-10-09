@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'partials/headers.html' %}
+</head>
+<body>
+    <div class="d-flex justify-content-end bd-highlight mb-2 bg-light text-dark bg-opacity-75 rounded" style="padding-right: 10px;">
+        <a class="me-3" href="/dashboard">Home</a>
+        <a class="me-3" href="/tree_search">Tree Search</a>
+        <a href="/logout">Logout</a>
+    </div>
+    <div>
+        <h1>Employee View All Locations & Trees Page</h1>
+    </div>
+    {% if 'user_id' in request.session %}
+    <div class="d-flex justify-content-between bd-highlight mb-2">
+        <p>Page is coming soon!</p>
+    </div>
+    {% endif %}
+</body>
+</html>

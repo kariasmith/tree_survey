@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'partials/headers.html' %}
+</head>
+<body>
+    <div class="d-flex justify-content-end bd-highlight mb-2 bg-light text-dark bg-opacity-75 rounded" style="padding-right: 10px;">
+        <a class="me-3" href="/dashboard">Home</a>
+        <a class="me-3" href="/add_location">Add Location</a>
+        <a class="me-3" href="/companies">Companies</a>
+        <a class="me-3" href="/tree_search">Tree Search</a>
+        <a href="/logout">Logout</a>
+    </div>
+    <div>
+        <h1 class="text-light">{{location.name}}</h1>
+    </div>
+    <div class="d-flex justify-content-between bd-highlight mb-2">
+    <div class="m-3 bg-primary text-light bg-opacity-50 rounded d-flex flex-column bd-highlight w-50 p-3 h-100" style="padding-top: 20px; padding-left: 10px; background-color: #eee;">
+        <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Location address:</label>
+        <div class="col-sm-10">
+        <p class="form-control">{{location.address}}</p>
+        </div>
+        </div>
+        <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Address line 2:</label>
+        <div class="col-sm-10">
+        <p class="form-control form-control-lg">{{location.address_2}}</p> <!--  -->
+        </div>
+        </div>
+        <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">City:</label>
+        <div class="col-sm-10">
+        <p class="form-control">{{location.city}}</p>
+        </div>
+        </div>
+        <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">State:</label>
+        <div class="col-sm-10">
+        <p class="form-control">{{location.state}}</p>
+        </div>
+        </div>
+        <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Zip:</label>
+        <div class="col-sm-10">
+        <p class="form-control">{{location.zip}}</p>
+        </div>
+        </div>
+    </div>
+    <div class="m-3 bg-primary text-light bg-opacity-50 rounded d-flex flex-column bd-highlight w-50 p-3 h-100" style="padding-top: 20px; padding-left: 10px; background-color: #eee;">
+        <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Deciduous trees:</label>
+        <div class="col-sm-10">
+        <p class="form-control">{{location.deciduous_trees}}</p>
+        </div>
+        </div>
+        <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Coniferous trees:</label>
+        <div class="col-sm-10">
+        <p class="form-control">{{location.coniferous_trees}}</p>
+        </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

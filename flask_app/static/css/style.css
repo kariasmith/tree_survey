@@ -1,0 +1,27 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .bg-image {
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Images used */
+  .img1 { background-image: url("/static/images/maxx-gong-AnKC9klnyKk-unsplash.jpg"); }
+  .img2 { background-image: url("/static/images/matt-artz-nTRDnDdDYk8-unsplash.jpg"); }
+  .img3 { background-image: url("/static/images/daniel-sessler-_3DI_vx2ygg-unsplash.jpg"); }
+  .img4 { background-image: url("/static/images/j-photos-yY1KhFBlisg-unsplash.jpg"); }
+  .img5 { background-image: url("/static/images/johannes-plenio-RwHv7LgeC7s-unsplash.jpg"); }
+  .img6 { background-image: url("/static/images/rural-explorer-oWS_3i0Y5sI-unsplash.jpg"); }
