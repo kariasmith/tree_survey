@@ -72,3 +72,20 @@ https://git-scm.com/docs/gitignore
 https://www.toptal.com/developers/gitignore
 
 🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷  🥷
+
+## Login & Registration Page:
+
+<a href="#"><img src="img/Login-Registration-Page.png" height="200" /></a>
+
+## Login Validation:
+
+<a href="#"><img src="img/Login-Validation.png" height="200" /></a>
+
+## Registration Validation:
+
+<a href="#"><img src="img/Registration-Validation.png" height="200" /></a>
+<a href="#"><img src="img/Registration-Validation2.png" height="200" /></a>
+
+## Dashboard (Home) Page:
+
+<a href="#"><img src="img/Dashboard-Page.png" height="200" /></a>
