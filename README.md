@@ -94,3 +94,10 @@ https://www.toptal.com/developers/gitignore
 
 <a href="#"><img src="img/Add-Location-Page.png" height="200" /></a>
 <a href="#"><img src="img/Add-Location-Validation.png" height="200" /></a>
+
+## View Location Page & Edit Location Page (Read/Select & Update):
+
+<a href="#"><img src="img/View-Location-Page.png" height="200" /></a>
+<a href="#"><img src="img/Edit-Location-Page.png" height="200" /></a>
+
+### Delete link is listed on the Dashboard page.
