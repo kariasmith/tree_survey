@@ -89,3 +89,8 @@ https://www.toptal.com/developers/gitignore
 ## Dashboard (Home) Page:
 
 <a href="#"><img src="img/Dashboard-Page.png" height="200" /></a>
+
+## Add Location Page & Validation (Create/Insert):
+
+<a href="#"><img src="img/Add-Location-Page.png" height="200" /></a>
+<a href="#"><img src="img/Add-Location-Validation.png" height="200" /></a>
