@@ -101,3 +101,9 @@ https://www.toptal.com/developers/gitignore
 <a href="#"><img src="img/Edit-Location-Page.png" height="200" /></a>
 
 ### Delete link is listed on the Dashboard page.
+
+## Instructions: (Note: these instructions are for a Mac.)
+You will have to forward engineer the ERD and run 'pipenv install PyMySQL flask flask-bcrypt' after downloading the files.
+pipenv shell
+python3 server.py
+Open Local host in your browser.
